@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		0F26767023C1B71D00083382 /* realmTableview.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F26766E23C1B71D00083382 /* realmTableview.xcdatamodeld */; };
 		0F26767223C1B71F00083382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F26767123C1B71F00083382 /* Assets.xcassets */; };
 		0F26767523C1B71F00083382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F26767323C1B71F00083382 /* LaunchScreen.storyboard */; };
+		0F26767D23C1B76100083382 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F26767C23C1B76100083382 /* data.swift */; };
+		0F26768023C1BA8300083382 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0F26767F23C1BA8300083382 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,7 @@
 		0F26767123C1B71F00083382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F26767423C1B71F00083382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F26767623C1B71F00083382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F26767C23C1B76100083382 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F26768023C1BA8300083382 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +70,7 @@
 				0F26767323C1B71F00083382 /* LaunchScreen.storyboard */,
 				0F26767623C1B71F00083382 /* Info.plist */,
 				0F26766E23C1B71D00083382 /* realmTableview.xcdatamodeld */,
+				0F26767C23C1B76100083382 /* data.swift */,
 			);
 			path = realmTableview;
 			sourceTree = "<group>";
@@ -86,6 +91,9 @@
 			dependencies = (
 			);
 			name = realmTableview;
+			packageProductDependencies = (
+				0F26767F23C1BA8300083382 /* RealmSwift */,
+			);
 			productName = realmTableview;
 			productReference = 0F26766223C1B71D00083382 /* realmTableview.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 0F26765923C1B71D00083382;
+			packageReferences = (
+				0F26767E23C1BA8300083382 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 0F26766323C1B71D00083382 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,6 +155,7 @@
 				0F26766A23C1B71D00083382 /* ViewController.swift in Sources */,
 				0F26766623C1B71D00083382 /* AppDelegate.swift in Sources */,
 				0F26766823C1B71D00083382 /* SceneDelegate.swift in Sources */,
+				0F26767D23C1B76100083382 /* data.swift in Sources */,
 				0F26767023C1B71D00083382 /* realmTableview.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0F26767E23C1BA8300083382 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0F26767F23C1BA8300083382 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F26767E23C1BA8300083382 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		0F26766E23C1B71D00083382 /* realmTableview.xcdatamodeld */ = {
